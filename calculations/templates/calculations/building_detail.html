@@ -1,0 +1,8 @@
+<h1>{{ building.name }}</h1>
+<ul>
+    {% for room in building.rooms.all %}
+    <li>{{ room.name }} - Area: {{ room.area }}</li>
+    {% endfor %}
+</ul>
+<p>Total Area: {{ building.total_area }}</p>
+<a href="{% url 'building_list' %}">Back to buildings</a>

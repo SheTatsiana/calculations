@@ -1,0 +1,7 @@
+<h1>Buildings</h1>
+<ul>
+    {% for building in buildings %}
+    <li><a href="{% url 'building_detail' building.pk %}">{{ building.name }}</a></li>
+    {% endfor %}
+</ul>
+<a href="{% url 'building_new' %}">Add new building</a>
